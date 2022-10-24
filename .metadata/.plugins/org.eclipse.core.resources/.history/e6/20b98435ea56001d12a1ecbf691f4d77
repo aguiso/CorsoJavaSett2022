@@ -1,0 +1,16 @@
+package srl.neotech.corsojava.java04;
+
+public class Alimentare extends Prodotto {
+	
+	private String dataDiScadenza;
+
+	public String getDataDiScadenza() {
+		return dataDiScadenza;
+	}
+
+	public void setDataDiScadenza(String dataDiScadenza) {
+		this.dataDiScadenza = dataDiScadenza;
+	} 
+	
+	
+}

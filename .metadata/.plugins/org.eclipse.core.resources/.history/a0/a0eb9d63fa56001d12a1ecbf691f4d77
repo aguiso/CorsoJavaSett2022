@@ -1,0 +1,6 @@
+package srl.neotech.corsojava.scacchimassi;
+
+public class Partita {
+	
+	TavoloDaGioco unTavolo = null;
+}

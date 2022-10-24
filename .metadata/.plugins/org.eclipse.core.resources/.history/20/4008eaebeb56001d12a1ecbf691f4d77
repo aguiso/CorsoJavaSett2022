@@ -1,0 +1,29 @@
+package srl.neotech.corsojava.java04;
+
+import java.util.ArrayList;
+
+public class Startup {
+	
+	public static ArrayList<Prodotto> prodotti = new ArrayList<Prodotto>();
+
+	public static void main(String[] args) {
+		
+		for (int i=0; i<200; i++) {
+			Alimentare alim = new Alimentare();
+			p.setCodice("654321");
+			p.getDescrizione("plastica");
+			p.getPrezzo(25.00);
+			NonAlimentare nonAlim = new NonAlimentare();
+			p.setCodice("123456");
+			p.getDescrizione("ferro");
+			p.getPrezzo(12.50);
+			prodotti.add(alim);
+			prodotti.add(nonAlim);
+			p.applicaSconto();
+			p.calcoloMateriale();
+			System.out.println("Prodotto: "+prodotti.size()+" codice: "+p.getCodice()+" descrizione: "+p.getDescrizione()+" prezzo: "+p.getPrezzo()+" prezzo scontato: "+p.applicaSconto());
+		}
+
+	}
+
+}

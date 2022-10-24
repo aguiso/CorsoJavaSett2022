@@ -1,0 +1,12 @@
+package srl.neotech.corsojava.scacchimassi;
+
+public class Cella {
+	
+	/* 
+	 * Integer è un oggetto e quindi ha i metodi della classe Integer
+	 */
+	
+	private Integer posizione;
+	private int 
+
+}

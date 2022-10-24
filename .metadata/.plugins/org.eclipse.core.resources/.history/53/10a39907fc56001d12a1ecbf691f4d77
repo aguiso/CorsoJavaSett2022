@@ -1,0 +1,16 @@
+package srl.neotech.corsojava.scacchimassi;
+
+public class Partita {
+	
+	TavoloDaGioco unTavolo = new TavoloDaGioco();
+	/* 
+	 * Utile solo nel caso ci siano più di due giocatori!!
+	 * 
+	 * ArrayList<Giocatore> giocatori = new ArrayList<Giocatore>();
+	 */
+	
+	
+	
+	
+	
+}

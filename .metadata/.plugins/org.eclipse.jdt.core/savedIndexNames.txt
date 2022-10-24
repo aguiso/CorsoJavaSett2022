@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/Users/alessandroguiso/Desktop/GitHub/CorsoJavaSett2022/.metadata/.plugins/org.eclipse.jdt.core
+1865797976.index
+3465978046.index
+1471905261.index

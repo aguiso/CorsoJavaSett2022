@@ -1,0 +1,14 @@
+package srl.neotech.corsojava.scacchimassi;
+
+public class Startup {
+
+	public static void main(String[] args) {
+		
+		Partita p = new Partita();
+		Giocatore g1 = new Giocatore();
+		Giocatore g2 = new Giocatore();
+		TavoloDaGioco tavolo = new TavoloDaGioco();
+
+	}
+
+}
