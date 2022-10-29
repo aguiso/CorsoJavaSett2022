@@ -1,1 +1,20 @@
-/.metadata/
+
+.metadata/.plugins/org.eclipse.core.resources/
+
+.metadata/
+
+.gitignore.rtf
+
+Arraylist02/bin/
+
+TestRandom3/src/srl/neotech/corsojava/testrandom3/.DS_Store
+
+Arraylist02/src/srl/neotech/corsojava/arraylist02/.DS_Store
+
+Arraylist02/.DS_Store
+
+.DS_Store
+
+.gitignore 2
+
+*.rtf
