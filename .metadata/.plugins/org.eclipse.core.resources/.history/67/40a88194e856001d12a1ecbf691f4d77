@@ -1,5 +1,0 @@
-package srl.neotech.corsojava.java04;
-
-public class Alimentare extends Prodotto {
-
-}

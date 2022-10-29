@@ -1,5 +1,0 @@
-package srl.neotech.corsojava.java04;
-
-public class NonAlimentare extends Prodotto {
-
-}

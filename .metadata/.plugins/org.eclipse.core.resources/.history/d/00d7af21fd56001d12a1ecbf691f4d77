@@ -1,9 +1,0 @@
-package srl.neotech.corsojava.scacchimassi;
-
-import java.util.ArrayList;
-
-public class TavoloDaGioco {
-	
-	ArrayList<Cella> celle = new ArrayList<Cella>();
-
-}
