@@ -18,3 +18,7 @@ Arraylist02/.DS_Store
 .gitignore 2
 
 *.rtf
+
+*.class
+
+*.DS_Store
