@@ -1,13 +1,20 @@
-package srl.neotech.corsojava.fabbricadibibita;
-
-import java.util.Random;
+package srl.neotech.corsojava.fabbricadibibitadefinitivo;
 
 public class Cisterna {
 	
+	private String tipologia;
 	private Integer quantita;
 	private Integer evapPerDay;
 	private Integer livelloGas;
+	private Integer theshold; 
 	
+	
+	public String getTipologia() {
+		return tipologia;
+	}
+	public void setTipologia(String tipologia) {
+		this.tipologia = tipologia;
+	}
 	public Integer getQuantita() {
 		return quantita;
 	}
@@ -27,30 +34,19 @@ public class Cisterna {
 		this.livelloGas = livelloGas;
 	}
 	
-	public Cisterna tipoCisterna() {
-		Random r = new Random();
-		int low = 1;
-		int high = 3;
-		int result = r.nextInt(high - low) + low;
-		
-		Cisterna cist = null;
-		if (result == 1 ) {
-			cist = new CisternaAlluminio();
-		}
-		if (result == 2 ) {
-			cist = new CisternaRame();
-		}
-		if (result == 3 ) {
-			cist = new CisternaAcciaio();
-		}
-		
-		return cist;
-		
+	public Integer getTheshold() {
+		return theshold;
 	}
+	public void setTheshold(Integer theshold) {
+		this.theshold = theshold;
+	}
+		
 	@Override
 	public String toString() {
-		return "Cisterna [quantita=" + quantita + ", evapPerDay=" + evapPerDay + ", livelloGas=" + livelloGas + "]";
+		return "Cisterna [materiale=" + tipologia + ", quantita=" + quantita + ", evapPerDay=" + evapPerDay
+				+ ", livelloGas=" + livelloGas + "]";
 	}
+	
 	
 	
 
