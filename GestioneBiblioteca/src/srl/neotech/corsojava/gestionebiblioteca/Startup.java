@@ -1,18 +1,15 @@
 package srl.neotech.corsojava.gestionebiblioteca;
 
-import java.util.ArrayList;
 import java.util.Random;
-
 import com.github.javafaker.Faker;
 
 public class Startup {
-	
-	static ArrayList<Libro> libri = new ArrayList<Libro>();
 
 	public static void main(String[] args) {
 		
 		Random rnd = new Random();
 		Faker faker = new Faker();
+		Biblioteca biblioteca = new Biblioteca();
 		
 		for (int i=0; i<100; i++) {
 			Libro libro = new Libro();
@@ -29,7 +26,7 @@ public class Startup {
 			libro.setSezione(sezione);
 			libro.setTitolo(titolo);
 			
-			libri.add(libro);
+			biblioteca.getLibri().add(libro);
 		}
 		
 		for (int j=0; j<100; j++) {
@@ -38,16 +35,25 @@ public class Startup {
 			
 			String listaLibri = faker.book().title();
 			String nome = faker.name().fullName();
+	
 			
 			associato.setIdAssociato(numeroCasuale);
 			associato.setListaDiLibriPresi(listaLibri);
 			associato.setNominativo(nome);
-			associato.setStato();
+			associato.setStato(null);
 						
-			libri.add(associato);
+			biblioteca.getAssociati().add(associato);
 			
 		}
-
+		
+		for (Libro l: biblioteca.getLibri() ) {
+			System.out.println(l);
+		}
+		
+		for (Associato a: biblioteca.getAssociati() ) {
+			System.out.println(a);
+		}
+		
 	}
 
 }
