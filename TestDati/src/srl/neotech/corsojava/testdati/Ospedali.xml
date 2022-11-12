@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dettaglio-asl>
+	<denominazione>ASL Roma 1</denominazione>
+	<via>Via Benevento 34</via>
+	<orario-apertura>9:00</orario-apertura>
+	<orario-chiusura>17:00</orario-chiusura>
+	<parcheggi>180</parcheggi>
+	
+<ospedali>
+
+	<ospedale id="ospedale 01">
+		<denominazione>ASL Roma 2</denominazione>
+		<via>Via Roma 34</via>
+		<orario-apertura>9:00</orario-apertura>
+		<orario-chiusura>17:00</orario-chiusura>
+		<parcheggi>280</parcheggi>
+			<reparti>
+				<reparto id="reparto 01">
+				<denominazione>Ortopedia</denominazione> 
+				<primario>Dott. Saccucci</primario>
+				<posti-letto>67</posti-letto>
+				</reparto>
+				<reparto id="reparto 02">
+				<denominazione>Chirurgia</denominazione> 
+				<primario>Dott.ssa Camponeschi</primario>
+				<posti-letto>75</posti-letto>
+				</reparto>
+				<reparto id="reparto 03">
+				<denominazione>Medicina Generale</denominazione> 
+				<primario>Dott. Guiso</primario>
+				<posti-letto>380</posti-letto>
+				</reparto>
+			</reparti>
+	</ospedale>
+		<ospedale id="ospedale 02">
+		<denominazione>ASL Roma 3</denominazione>
+		<via>Via Lazio 34</via>
+		<orario-apertura>9:00</orario-apertura>
+		<orario-chiusura>17:00</orario-chiusura>
+		<parcheggi>80</parcheggi>
+			<reparti>
+				<reparto id="reparto 02">
+				<denominazione>Ortopedia</denominazione> 
+				<primario>Dott.ssa Ambrosio</primario>
+				<posti-letto>67</posti-letto>
+				</reparto>
+				<reparto id="reparto 02">
+				<denominazione>Chirurgia</denominazione> 
+				<primario>Dott. Sorrentino</primario>
+				<posti-letto>75</posti-letto>
+				</reparto>
+				<reparto id="reparto 03" stato="chiuso">
+				<denominazione>Medicina Generale</denominazione> 
+				<primario>Dott. Tarquini</primario>
+				<posti-letto>380</posti-letto>
+				</reparto>
+			</reparti>
+	</ospedale>
+
+
+
+
+
+</ospedali>	
+	
+	
+
+</dettaglio-asl>
