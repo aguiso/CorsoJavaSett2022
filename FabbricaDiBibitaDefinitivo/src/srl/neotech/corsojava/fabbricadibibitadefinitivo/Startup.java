@@ -30,11 +30,11 @@ public class Startup {
 			numeroCasuale = rnd.nextInt(1,101);
 			unaCisternaDaAggiungere.setLivelloGas(numeroCasuale);
 			
-			if (unaCisternaDaAggiungere.getLivelloGas() < unaCisternaDaAggiungere.getTheshold() ) {
+			/* if (unaCisternaDaAggiungere.getLivelloGas() < unaCisternaDaAggiungere.getTheshold() ) {
 				System.out.println("La bevanda è vendibile");
 			}
 			else 
-				System.out.println("La bevanda non è vendibile");
+				System.out.println("La bevanda non è vendibile"); */
 						
 		}
 		
