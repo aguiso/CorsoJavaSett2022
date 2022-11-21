@@ -11,7 +11,12 @@ public class Business extends Passeggero {
 	public void setHaGiornale(Boolean haGiornale) {
 		this.haGiornale = haGiornale;
 	}
-	
+
+//	@Override
+//	//public String toString() {
+//		return "Business [haGiornale=" + haGiornale + "]";
+//	}
+//	
 	
 
 }

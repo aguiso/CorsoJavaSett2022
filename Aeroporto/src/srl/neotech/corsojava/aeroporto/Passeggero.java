@@ -39,6 +39,12 @@ public class Passeggero {
 		this.haBagagli = haBagagli;
 	}
 	
+	@Override
+	public String toString() {
+		return "Passeggero [idUnivoco=" + idUnivoco + ", MF=" + MF + ", hasFiore=" + hasFiore + ", eta=" + eta
+				+ ", haBagagli=" + haBagagli + "]";
+	}
+	
 	
 
 }

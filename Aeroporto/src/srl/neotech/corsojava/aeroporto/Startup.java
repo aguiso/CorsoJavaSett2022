@@ -8,103 +8,136 @@ public class Startup {
 
 	public static void main(String[] args) {
 		
-		Random rnd = new Random();
 		Aeroporto aeroporto = new Aeroporto();
+		
+		/* Creazione Aerei in volo (AVVICINAMENTO) */
+		Random rnd = new Random();
 		Faker faker = new Faker();
 		
-		for (int i=0; i<100; i++) {
-			Aereo aereiInPartenza = new Aereo();
+		for (int i=0; i<200; i++) {
+			Aereo areiInAvvicinamento = new Aereo();
 			
-			/* Assegno id Numerico all'aereoporto casualmente */
-			Integer idAereo = faker.number().randomDigit();
-			aereiInPartenza.setIdUnivoco(idAereo);
+			/* Assegno distanza dall'aeroporto */
+			areiInAvvicinamento.setDistanzaDallAeroporto(rnd.nextInt(100));
 			
-			/* Assegno orario arbitrario ad ogni singolo aereo */
-			Integer orarioPartenza = faker.date().hashCode();
-			aereiInPartenza.setOrario(orarioPartenza);
+			/* Assegno id Numerico all'aereoporto */
+			areiInAvvicinamento.setIdUnivoco(i);
+			
+			/* Assegno orario di partenza */
+			areiInAvvicinamento.setOrario(rnd.nextInt(500));
+			
+			/* Assegno compagnia arbitraria ad ogni singolo aereo */
+			areiInAvvicinamento.setCompagniaAerea(faker.company().name());
+			
+			/* Velocità aereo */
+			areiInAvvicinamento.setVelocità(rnd.nextInt(1,100));
 			
 			/* Indicazione modello aereo */
-			String costruttore = faker.space().company();
-			aereiInPartenza.getModello().setCostruttore(costruttore);
-			String codiceModello = faker.code().ean8();
-			aereiInPartenza.getModello().setCodiceModello(codiceModello);
-			Integer numeroPasseggeri = faker.number().numberBetween(1, 100);
-			aereiInPartenza.getModello().setCapienzaNumPasseggeri(numeroPasseggeri);
+			ModelloAereo modello = new ModelloAereo();
+			modello.setCapienza(rnd.nextInt(200));
+			modello.setCostruttore(faker.company().name());
+			modello.setCodiceModello(faker.code().isbn13());
+			areiInAvvicinamento.setModello(modello);
 			
-			/* Assegno compagnia aerea casualmente */
-			String compagniaAerea = faker.company().name();
-			aereiInPartenza.setCompagniaAerea(compagniaAerea);
+			/* Stato aereo */
+			areiInAvvicinamento.setStato(StatoAereo.IN_AVVICINAMENTO);
+			
+			//Popolamento passeggeri in volo
+			
+			for (int j=0; j<modello.getCapienza(); j++) {
+				Passeggero p=null;
+				Integer tipoPasseggero = rnd.nextInt(2);
+				if (tipoPasseggero == 0) p = new Excelsior();
+				if (tipoPasseggero == 1) p = new Business();
+				if (tipoPasseggero == 2) p = new Turista();
+				
+				p.setEta(rnd.nextInt(100));
+				p.setIdUnivoco(j);
+				Integer sceltaMF = rnd.nextInt(1);
+				if (sceltaMF == 0 ) p.setMF('M');
+				if (sceltaMF == 1 ) p.setMF('F');
+				p.setHaBagagli(false);
+				p.setHasFiore(false);
+				
+				areiInAvvicinamento.getPasseggeri().add(p);
+			}
 			
 			/* Assegno distanza dall'aereoporto casualmente */
 			Integer distanzaCasuale = faker.number().numberBetween(1, 500);
-			aereiInPartenza.setDistanzaDallAeroporto(distanzaCasuale);
+			areiInAvvicinamento.setDistanzaDallAeroporto(distanzaCasuale);
 			
-			aeroporto.getAerei().add(aereiInPartenza);
-			
+			aeroporto.getAereiInPartenza().add(areiInAvvicinamento);
 		}
 		
-		for (int j=0; j<200; j++) {
-			Aereo aereiInAvvicinamento = new Aereo();
+		for (int j=0; j<100; j++) {
+			Aereo aereiInPartenza = new Aereo();
 			
-			/* Assegno id Numerico all'aereoporto casualmente */
-			Integer idAereo = faker.number().randomDigit();
-			aereiInAvvicinamento.setIdUnivoco(idAereo);
+			/* Assegno distanza dall'aeroporto */
+			aereiInPartenza.setDistanzaDallAeroporto(rnd.nextInt(100));
 			
-			/* Assegno orario arbitrario ad ogni singolo aereo */
-			Integer orarioPartenza = faker.date().hashCode();
-			aereiInAvvicinamento.setOrario(orarioPartenza);
+			/* Assegno id Numerico all'aereoporto */
+			aereiInPartenza.setIdUnivoco(j);
+			
+			/* Assegno orario di partenza */
+			aereiInPartenza.setOrario(rnd.nextInt(500));
+			
+			/* Assegno compagnia arbitraria ad ogni singolo aereo */
+			aereiInPartenza.setCompagniaAerea(faker.company().name());
+			
+			/* Velocità aereo */
+			aereiInPartenza.setVelocità(rnd.nextInt(1,100));
 			
 			/* Indicazione modello aereo */
-			String costruttore = faker.space().company();
-			aereiInAvvicinamento.getModello().setCostruttore(costruttore);
-			String codiceModello = faker.code().ean8();
-			aereiInAvvicinamento.getModello().setCodiceModello(codiceModello);
-			Integer numeroPasseggeri = faker.number().numberBetween(1, 100);
-			aereiInAvvicinamento.getModello().setCapienzaNumPasseggeri(numeroPasseggeri);
+			ModelloAereo modello = new ModelloAereo();
+			modello.setCapienza(rnd.nextInt(200));
+			modello.setCostruttore(faker.company().name());
+			modello.setCodiceModello(faker.code().isbn13());
+			aereiInPartenza.setModello(modello);
 			
-			/* Assegno compagnia aerea casualmente */
-			String compagniaAerea = faker.company().name();
-			aereiInAvvicinamento.setCompagniaAerea(compagniaAerea);
-			
-			/* Assegno distanza dall'aereoporto casualmente */
-			Integer distanzaCasuale = faker.number().numberBetween(1, 500);
-			aereiInAvvicinamento.setDistanzaDallAeroporto(distanzaCasuale);
-			
-			aeroporto.getAerei().add(aereiInAvvicinamento);
+			/* Stato aereo */
+			aereiInPartenza.setStato(StatoAereo.IN_PARTENZA);
 			
 		}
 		
 		for (int k=0; k<1000; k++) {
-			Passeggero passeggero = new Passeggero();
+			Passeggero passeggeriInAttesa = new Passeggero();
 			
 			/* Assegno id Numerico al passeggero casualmente */
-			Integer idPasseggero = faker.number().randomDigit();
-			passeggero.setIdUnivoco(idPasseggero);
+			passeggeriInAttesa.setIdUnivoco(k);
 			
-			/* Definizione passeggero Maschio o Femmina */
-			int numeroCasuale = rnd.nextInt(1,2) +1;
+			Passeggero p=null;
+			Integer tipoPasseggero = rnd.nextInt(2);
+			if (tipoPasseggero == 0) p = new Excelsior();
+			if (tipoPasseggero == 1) p = new Business();
+			if (tipoPasseggero == 2) p = new Turista();
 			
-			if (numeroCasuale == 1 ) passeggero.setMF('M');
-			if (numeroCasuale == 2 ) passeggero.setMF('F');
+			/* Definizione sesso passeggero Maschio o Femmina */
+			Integer sceltaMF = rnd.nextInt(1);
+			if (sceltaMF == 0 ) passeggeriInAttesa.setMF('M');
+			if (sceltaMF == 1 ) passeggeriInAttesa.setMF('F');
 			
 			/* Scelta eta casuale */
-			Integer eta = faker.number().numberBetween(1, 100);
-			passeggero.setEta(eta);
+			passeggeriInAttesa.setEta(faker.number().numberBetween(1, 100));
 			
 			/* Passeggeri con o senza bagagli */
+			passeggeriInAttesa.setHaBagagli(false);
+			passeggeriInAttesa.setHasFiore(false);
 			
-			aeroporto.getPasseggeri().add(passeggero);
+			aeroporto.getPasseggeri().add(passeggeriInAttesa);
 			
 		}	
-			
-		for (Aereo aP: aeroporto.getAerei()) {
+		
+		/* far atterrare tutti gli aerei , quando l'aereo atterra si fa il checkout */
+		for (Aereo a: aeroporto.getAereiInAvvicinamento()) {
+			System.out.println(a);
+		}
+		
+		/* far decollare tutti gli aerei , riempire l'aereo e poi decollo */	
+		for (Aereo aP: aeroporto.getAereiInPartenza()) {
 			System.out.println(aP);
 		}
 		
-		for (Aereo aA: aeroporto.getAerei()) {
-			System.out.println(aA);
-		}
-		
+	
 		for (Passeggero p: aeroporto.getPasseggeri()) {
 			System.out.println(p);
 		}

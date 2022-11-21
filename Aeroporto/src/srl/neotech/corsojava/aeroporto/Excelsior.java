@@ -11,7 +11,12 @@ public class Excelsior extends Passeggero {
 	public void setHaChampagne(Boolean haChampagne) {
 		this.haChampagne = haChampagne;
 	}
-	
+
+//	@Override
+//	public String toString() {
+//		return "Excelsior [haChampagne=" + haChampagne + "]";
+//	}
+//	
 	
 
 }

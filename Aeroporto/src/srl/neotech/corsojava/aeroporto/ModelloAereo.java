@@ -1,10 +1,10 @@
 package srl.neotech.corsojava.aeroporto;
 
-public class ModelloAereo extends Aereo {
+public class ModelloAereo {
 	
 	private String costruttore;
 	private String codiceModello;
-	private Integer capienzaNumPasseggeri;
+	private Integer capienza;
 	
 	public String getCostruttore() {
 		return costruttore;
@@ -18,12 +18,18 @@ public class ModelloAereo extends Aereo {
 	public void setCodiceModello(String codiceModello) {
 		this.codiceModello = codiceModello;
 	}
-	public Integer getCapienzaNumPasseggeri() {
-		return capienzaNumPasseggeri;
+	public Integer getCapienza() {
+		return capienza;
 	}
-	public void setCapienzaNumPasseggeri(Integer capienzaNumPasseggeri) {
-		this.capienzaNumPasseggeri = capienzaNumPasseggeri;
+	public void setCapienza(Integer capienza) {
+		this.capienza = capienza;
 	}
-
+	@Override
+	public String toString() {
+		return "ModelloAereo [costruttore=" + costruttore + ", codiceModello=" + codiceModello
+				+ ", capienzaNumPasseggeri=" + capienza + "]";
+	}
+	
+	
 	
 }

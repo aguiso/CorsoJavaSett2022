@@ -11,7 +11,12 @@ public class Turista extends Passeggero {
 	public void setHaAnimale(Boolean haAnimale) {
 		this.haAnimale = haAnimale;
 	}
-	
+
+//	@Override
+//	public String toString() {
+//		return "Turista [haAnimale=" + haAnimale + "]";
+//	}
+//	
 	
 
 }
