@@ -3,3 +3,25 @@ h1 {
 	font-weight: bold;
 	color: blue;
 }
+
+table, th, td {
+  border: 1px solid;
+}
+
+.intestazione {
+	background-color: green;
+	font : Arial;
+	font-weight: bold;
+	color: white;
+}
+
+img {
+	width: 30px;
+}
+
+.elemento {
+	background-color: lightgreen;
+	font : Arial;
+	font-weight: bold;
+	color: black;
+}
