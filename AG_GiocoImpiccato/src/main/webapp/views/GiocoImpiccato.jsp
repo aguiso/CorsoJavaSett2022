@@ -13,6 +13,10 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
 	integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
 	crossorigin="anonymous"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+	integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script>
 	$(document).ready(function() {
 		$("table.GiocoImpiccato").hide();
@@ -86,11 +90,11 @@
 		</div>
 	</div>
 
-	<h3>Hai Vinto!!</h3>
-	<i class="fa-solid fa-trophy"></i>
+	<h3>Hai Vinto!! <i class="fa-solid fa-trophy"></i></h3>
 
-	<h3>Hai Perso!!</h3>
-	<i class="fa-solid fa-xmark"></i>
+
+	<h3>Hai Perso!! <i class="fa-solid fa-xmark"></i></h3>
+	
 
 
 
