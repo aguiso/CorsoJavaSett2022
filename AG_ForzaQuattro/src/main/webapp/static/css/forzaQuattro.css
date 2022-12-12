@@ -1,0 +1,16 @@
+h1 {
+	color: red;
+	font-weight: bold;
+}
+
+div {
+	margin: 20px;
+}
+
+.cellaGialla{
+   background-color:yellow;
+}
+
+.cellaRossa{
+   background-color: red;
+}
