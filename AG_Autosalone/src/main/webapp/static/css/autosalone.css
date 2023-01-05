@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+table,thead, tr, td {
+  border: 1px solid black;
+}
+
+table {
+	padding: 70px;
+}
