@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class Automobile {
-	
+
 	private String id;
 	private String targa;
 	private ECostruttore costruttore;
@@ -13,8 +13,8 @@ public class Automobile {
 	private String annoCostruzione;
 	private EColore colore;
 	private BigDecimal costo;
-	private ArrayList<Accessorio> accessori=new ArrayList<Accessorio>();
-	
+	private ArrayList<Accessorio> accessori =new ArrayList<>();
+
 	public String getId() {
 		return id;
 	}
@@ -69,12 +69,12 @@ public class Automobile {
 	public void setAccessori(ArrayList<Accessorio> accessori) {
 		this.accessori = accessori;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Automobile [id=" + id + ", targa=" + targa + ", costruttore=" + costruttore + ", modello=" + modello
 				+ ", alimentazione=" + alimentazione + ", annoCostruzione=" + annoCostruzione + ", colore=" + colore
 				+ ", costo=" + costo + ", accessori=" + accessori + "]";
 	}
-	
+
 }

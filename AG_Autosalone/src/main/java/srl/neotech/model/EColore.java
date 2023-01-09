@@ -1,10 +1,11 @@
 package srl.neotech.model;
 
 public enum EColore {
-	
-	NERO,
-	BIANCO,
-	ROSSO,
-	BLU
+
+	Nero,
+	Bianco,
+	Rosso,
+	Blu,
+	Giallo
 
 }

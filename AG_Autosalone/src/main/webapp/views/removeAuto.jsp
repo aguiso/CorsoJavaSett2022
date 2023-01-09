@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%><!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -47,7 +48,7 @@
 		<!-- Main Sidebar Container -->
 		<aside class="main-sidebar sidebar-dark-primary elevation-4">
 			<!-- Brand Logo -->
-			<a class="brand-link"> <span class="brand-text font-weight-light">neotech</span>
+			<a href="home" class="brand-link"> <span class="brand-text font-weight-light">neotech</span>
 			</a>
 
 			<!-- Sidebar -->
@@ -83,13 +84,12 @@
 										<i class="far fa-solid fa-magnifying-glass"></i>
 										<p>Cerca Automobile</p>
 								</a></li>
-								
+					
 							</ul></li>
 					</ul>
 				</nav>
 				<!-- /.sidebar-menu -->
 			</div>
-			<!-- /.sidebar -->
 		</aside>
 
 		<!-- Content Wrapper. Contains page content -->
@@ -104,7 +104,7 @@
 						<div class="col-sm-6">
 							<ol class="breadcrumb float-sm-right">
 								<li class="breadcrumb-item"><a href="#">Home</a></li>
-								<li class="breadcrumb-item active">Autosalone</li>
+								<li class="breadcrumb-item active">Delete Auto</li>
 							</ol>
 						</div>
 					</div>
@@ -113,15 +113,7 @@
 			</section>
 
 			<!-- Main content -->
-			<section class="content">
-				<div class="clearfix">
-					<div class="row">
-						<div class="col-md-12" style="text-align: center">
-							<img width="1000" height="800" src="${urlImmagine}" alt="">
-						</div>
-					</div>
-				</div>
-			</section>
+			<section class="content"></section>
 			<!-- /.content -->
 		</div>
 		<!-- /.content-wrapper -->

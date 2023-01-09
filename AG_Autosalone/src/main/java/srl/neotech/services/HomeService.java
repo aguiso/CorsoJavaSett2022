@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class HomeService {
-	
+
 	public String getImmagine() {
 		String urlImmagine  = "";
 		Random rnd = new Random();
@@ -16,7 +16,7 @@ public class HomeService {
 		if (valore == 2) urlImmagine = "https://storage.googleapis.com/fp-media/1/2021/12/Lambo-Dubai.jpg";
 		if (valore == 3) urlImmagine = "https://cdnwp.dealerk.com/334bb86c/uploads/sites/8/2016/12/DSC_4435-copia.jpg";
 		if (valore == 4) urlImmagine = "https://www.motorionline.com/wp-content/uploads/2017/05/06-showroom-bugatti-uae-dubai-1024x768.jpg";
-	return urlImmagine;	
+	return urlImmagine;
 	}
-	
+
 }

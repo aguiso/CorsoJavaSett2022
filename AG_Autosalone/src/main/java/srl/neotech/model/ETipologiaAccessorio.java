@@ -1,10 +1,10 @@
 package srl.neotech.model;
 
 public enum ETipologiaAccessorio {
-	
-	CERCHI,
-	INTERNI,
-	INFOTEINMENT,
-	TETTUCCIO,
-	TELECAMERE
+
+	Cerchi,
+	Interni,
+	Infoteinment,
+	Tettuccio,
+	Telecamere
 }

@@ -17,6 +17,10 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 <!-- Theme style -->
 <link rel="stylesheet" href="static/css/adminlte.min.css">
+<!-- MDB -->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+	rel="stylesheet" />
 <!-- CSS locale -->
 <link rel="stylesheet" href="static/css/autosalone.css">
 </head>
@@ -31,7 +35,7 @@
 				<li class="nav-item"><a class="nav-link" data-widget="pushmenu"
 					href="#" role="button"><i class="fas fa-bars"></i></a></li>
 				<li class="nav-item d-none d-sm-inline-block"><a
-					href="index3.html" class="nav-link">Home</a></li>
+					href="home" class="nav-link">Home</a></li>
 			</ul>
 
 			<!-- Right navbar links -->
@@ -49,9 +53,6 @@
 
 			<!-- Sidebar -->
 			<div class="sidebar">
-				<!-- Sidebar user (optional) -->
-
-				<!-- SidebarSearch Form -->
 
 				<!-- Sidebar Menu -->
 				<nav class="mt-2">
@@ -67,35 +68,28 @@
 						</a>
 							<ul class="nav nav-treeview">
 								<li class="nav-item"><a href="home" class="nav-link"> <i
-										class="far fa-circle nav-icon"></i>
+										class="far fa-solid fa-house"></i>
 										<p>Home</p>
 								</a></li>
 								<li class="nav-item"><a href="listAuto" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
+										<i class="far fa-solid fa-list"></i>
 										<p>Lista Automobili</p>
 								</a></li>
 								<li class="nav-item"><a href="addAuto" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
+										<i class="far fa-solid fa-plus"></i>
 										<p>Aggiungi Automobile</p>
 								</a></li>
-								<li class="nav-item"><a href="deleteAuto" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Rimuovi Automobile</p>
-								</a></li>
+								
 								<li class="nav-item"><a href="searchAuto" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
+										<i class="far fa-solid fa-magnifying-glass"></i>
 										<p>Cerca Automobile</p>
 								</a></li>
-								<li class="nav-item"><a href="detailAuto" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Dettaglio Automobile</p>
-								</a></li>
+								
 							</ul></li>
 					</ul>
 				</nav>
 				<!-- /.sidebar-menu -->
 			</div>
-			<!-- /.sidebar -->
 		</aside>
 
 		<!-- Content Wrapper. Contains page content -->
@@ -105,7 +99,7 @@
 				<div class="container-fluid">
 					<div class="row mb-2">
 						<div class="col-sm-6">
-							<h1>Autosalone</h1>
+							<h1>Autosalone - Lista Auto</h1>
 						</div>
 						<div class="col-sm-6">
 							<ol class="breadcrumb float-sm-right">
@@ -123,30 +117,33 @@
 				<div class="clearfix">
 					<div class="row">
 						<div class="md-col-12 text-center">
-						
-								<table style="width: 250%">
-									<tr>
-										<th>id</th>
-										<th>Targa</th>
-										<th>Costruttore</th>
-										<th>Modello</th>
-										<th>Anno</th>
-										<th>Costo</th>
-										<th>Azioni</th>
-									</tr>
-									<c:forEach var="auto" items="${listAuto}">
-										<tr>
-											<td>${auto.id}</td>
-											<td>${auto.targa}</td>
-											<td>${auto.costruttore}</td>
-											<td>${auto.modello}</td>
-											<td>${auto.annoCostruzione}</td>
-											<td>${auto.costo}</td>
-											<td>pulsante</td>
-										</tr>
-									</c:forEach>
 
-								</table>
+							<table style="width: 100%">
+								<tr>
+									<th>id</th>
+									<th>Targa</th>
+									<th>Costruttore</th>
+									<th>Modello</th>
+									<th>Anno</th>
+									<th>Costo</th>
+									<th>Azioni</th>
+								</tr>
+								<c:forEach var="auto" items="${listAuto}">
+									<tr>
+										<td>${auto.id}</td>
+										<td>${auto.targa}</td>
+										<td>${auto.costruttore}</td>
+										<td>${auto.modello}</td>
+										<td>${auto.annoCostruzione}</td>
+										<td>${auto.costo}</td>
+										<td>
+											<a href='detailAuto?id=${auto.id}'><button type="button" class="btn btn-primary">Details</button></a>
+											<a href='removeAuto?id=${auto.id}'><button type="button" class="btn btn-danger">Remove</button></a>
+										</td>
+									</tr>
+								</c:forEach>
+								
+							</table>
 
 						</div>
 
@@ -183,6 +180,8 @@
 	<!-- Demo Template -->
 	<script src="static/js/fireAjax.js" type="text/javascript"></script>
 	<script src="static/js/demoTemplate.js" type="text/javascript"></script>
-
+	<!-- MDB -->
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
 </body>
 </html>

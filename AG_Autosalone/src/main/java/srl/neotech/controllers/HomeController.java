@@ -10,7 +10,7 @@ import srl.neotech.services.HomeService;
 
 @Controller
 public class HomeController {
-	
+
 	@Autowired
 	HomeService homeService;
 
@@ -21,6 +21,6 @@ public class HomeController {
     	modelMap.addAttribute("urlImmagine", url);
         return "home";
     }
-    
-   
+
+
 }

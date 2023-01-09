@@ -3,13 +3,13 @@ package srl.neotech.model;
 import java.math.BigDecimal;
 
 public class Accessorio {
-	
+
 	private String id;
 	private EClassAccessorio classe;
 	private ETipologiaAccessorio tipologia;
 	private String descrizione;
 	private BigDecimal costo;
-	
+
 	public String getId() {
 		return id;
 	}
@@ -45,7 +45,7 @@ public class Accessorio {
 		return "Accessorio [id=" + id + ", classe=" + classe + ", tipologia=" + tipologia + ", descrizione="
 				+ descrizione + ", costo=" + costo + "]";
 	}
-	
-	
+
+
 
 }
