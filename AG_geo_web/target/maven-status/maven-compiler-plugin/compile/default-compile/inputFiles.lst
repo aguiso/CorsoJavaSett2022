@@ -1,0 +1,10 @@
+/Users/alessandroguiso/Desktop/GitHub/CorsoJavaSett2022/AG_geo_web/src/main/java/srl/neotech/services/ElementoService.java
+/Users/alessandroguiso/Desktop/GitHub/CorsoJavaSett2022/AG_geo_web/src/main/java/srl/neotech/dao/ElementoDAO.java
+/Users/alessandroguiso/Desktop/GitHub/CorsoJavaSett2022/AG_geo_web/src/main/java/srl/neotech/requestresponse/ResponseBase.java
+/Users/alessandroguiso/Desktop/GitHub/CorsoJavaSett2022/AG_geo_web/src/main/java/srl/neotech/requestresponse/GetListaElementiResponse.java
+/Users/alessandroguiso/Desktop/GitHub/CorsoJavaSett2022/AG_geo_web/src/main/java/srl/neotech/configuration/SpringBootTomcatApplication.java
+/Users/alessandroguiso/Desktop/GitHub/CorsoJavaSett2022/AG_geo_web/src/main/java/srl/neotech/dao/repository/ElementoRepository.java
+/Users/alessandroguiso/Desktop/GitHub/CorsoJavaSett2022/AG_geo_web/src/main/java/srl/neotech/controllers/HomeController.java
+/Users/alessandroguiso/Desktop/GitHub/CorsoJavaSett2022/AG_geo_web/src/main/java/srl/neotech/requestresponse/RequestAddElemento.java
+/Users/alessandroguiso/Desktop/GitHub/CorsoJavaSett2022/AG_geo_web/src/main/java/srl/neotech/model/Elemento.java
+/Users/alessandroguiso/Desktop/GitHub/CorsoJavaSett2022/AG_geo_web/src/main/java/srl/neotech/requestresponse/GetElementoResponse.java

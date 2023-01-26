@@ -37,7 +37,7 @@ public class GeoRepository {
 		//Parametri da passsare alla query
 		MapSqlParameterSource params=new MapSqlParameterSource();
 		//Query
-		String query="select id_regione.regione from regione";
+		String query="select * from regione";
 		
 		List<Regione> elementi=jdbcTemplate.query(
 				query,
