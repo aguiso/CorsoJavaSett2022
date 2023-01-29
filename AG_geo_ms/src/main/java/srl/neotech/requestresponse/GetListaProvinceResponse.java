@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 import srl.neotech.model.Provincia;
 
-public class GetListaProvinceResponse extends ResponseBase {
+public class GetListaProvinceResponse extends ResponseBase{
 	
-	private ArrayList<Provincia> province =new ArrayList<Provincia>();
+	private ArrayList<Provincia> province=new ArrayList<Provincia>();
 
 	public ArrayList<Provincia> getProvince() {
 		return province;

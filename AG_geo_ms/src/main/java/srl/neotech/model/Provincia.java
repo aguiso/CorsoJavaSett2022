@@ -2,25 +2,33 @@ package srl.neotech.model;
 
 public class Provincia {
 	
-	private String sigla;
-	private String Provincia;
+	private String provincia;
+	private String idProvincia;
 	
-	public String getSigla() {
-		return sigla;
-	}
-	public void setSigla(String sigla) {
-		this.sigla = sigla;
-	}
+
+	
 	public String getProvincia() {
-		return Provincia;
+		return provincia;
 	}
+
 	public void setProvincia(String provincia) {
-		Provincia = provincia;
+		this.provincia = provincia;
 	}
-	public Provincia(String sigla, String provincia) {
-		this.sigla = sigla;
-		Provincia = provincia;
+
+	public String getIdProvincia() {
+		return idProvincia;
 	}
-	
-	
+
+	public void setIdProvincia(String idProvincia) {
+		this.idProvincia = idProvincia;
+	}
+
+	public Provincia(String provincia, String idProvincia) {
+		super();
+		this.provincia = provincia;
+		this.idProvincia = idProvincia;
+	}
+
+
+
 }

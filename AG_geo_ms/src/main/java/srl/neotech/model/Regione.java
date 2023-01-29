@@ -2,27 +2,32 @@ package srl.neotech.model;
 
 public class Regione {
 	
-	private Integer idRegione;
-	private String Regione;
+	private String regione;
+	private String idRegione;
+
 	
-	public Integer getIdRegione() {
+	public String getRegione() {
+		return regione;
+	}
+
+	public void setRegione(String regione) {
+		this.regione = regione;
+	}
+
+	public String getIdRegione() {
 		return idRegione;
 	}
-	public void setIdRegione(Integer idRegione) {
+
+	public void setIdRegione(String idRegione) {
 		this.idRegione = idRegione;
 	}
-	public String getRegione() {
-		return Regione;
-	}
-	public void setRegione(String regione) {
-		Regione = regione;
-	}
-	
-	public Regione(Integer idRegione, String regione) {
+
+	public Regione(String regione, String idRegione) {
+		super();
+		this.regione = regione;
 		this.idRegione = idRegione;
-		Regione = regione;
 	}
-	
+
 	
 
 }
