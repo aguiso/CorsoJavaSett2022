@@ -1,6 +1,5 @@
 package srl.neotech.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,13 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import srl.neotech.model.Comune;
 import srl.neotech.model.ComuneAutocomplete;
-import srl.neotech.model.Elemento;
 import srl.neotech.model.MeteoGiornaliero;
 import srl.neotech.model.Provincia;
 import srl.neotech.model.Regione;
 import srl.neotech.requestresponse.GetListaComuniResponse;
-import srl.neotech.requestresponse.GetListaElementiResponse;
-import srl.neotech.requestresponse.GetListaProvinceResponse;
 import srl.neotech.requestresponse.GetListaRegioniResponse;
 import srl.neotech.requestresponse.GetMeteoResponse;
 import srl.neotech.requestresponse.ResponseBase;

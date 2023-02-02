@@ -4,18 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.TransactionDefinition;
-import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.support.DefaultTransactionDefinition;
-
 import srl.neotech.model.Comune;
 import srl.neotech.model.ComuneAutocomplete;
-import srl.neotech.model.Elemento;
 import srl.neotech.model.Provincia;
 import srl.neotech.model.Regione;
 
@@ -91,14 +84,13 @@ public class GeoRepository {
 	public Comune getMeteo(String istat){
 		MapSqlParameterSource params=new MapSqlParameterSource();
 		params.addValue("istat", istat);
-		String query="select lat, lng  from geoloc where istat=:istat";
+		String query="select lat,lng from geoloc where istat=:istat";
 		List<Comune> comuni = jdbcTemplate.query(
 			query,
 	        params,
 	        (rs, rowNum) -> new Comune(rs.getString("lat"), rs.getString("lng"))
 	        );
    	 return comuni.get(0);
-   	 
 	}
 	
 }
